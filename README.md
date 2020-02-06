@@ -1,7 +1,7 @@
 # Magyar Script a YouTubeDL-hez
 
 ##### Letöltés/Telepítés menete:
-1) Töltsd le a legfrissebb [verziót](https://github.com/Xelofan/hungarian-youtubedl-script/releases/download/1.0/1.0.zip), majd csomagold ki valahova a tartalmát.
+1) Töltsd le a legfrissebb [verziót](https://github.com/Xelofan/hungarian-youtubedl-script/releases/download/1.1/1.1.zip), majd csomagold ki valahova a tartalmát.
 2) Kész.
 
 ##### Használat:
