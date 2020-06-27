@@ -1,16 +1,15 @@
 @echo off
+set /p version=<.files/.version
+
+:: Creator stuffs -- angolul jobban néz ki
+title YouTubeDL Script %version% - By Xelofan
+
 echo.
-echo Ffmpeg fajl ellenorzese.
+echo Script verzio ellenorzese..
 echo.
-IF EXIST ".files\ffmpeg.exe" (
-	echo Ffmpeg fajl letezik.
-	echo.
-) ELSE (
-	echo Nem talalhato az ffmpeg.exe fajl, letoltes megkezdese..
-	powershell -command "wget -O .files\ffmpeg.exe https://filehost.xelofan.hu/megtekintes/xa513fcy.exe"
-	echo Ffmpeg fajl letoltve.
-)
-echo YouTubeDL fajl ellenorzese.
+IF 
+echo.
+echo YouTubeDL fajl ellenorzese..
 echo.
 IF EXIST ".files\youtube-dl.exe" (
 	echo YouTubeDL fajl letezik.
