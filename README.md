@@ -1,7 +1,7 @@
 # Magyar Script a YouTubeDL-hez
 
 ##### Letöltés/Telepítés menete:
-1) Töltsd le a legfrissebb [verziót](https://github.com/Xelofan/youtubedl-script/archive/master.zip)!
+1) Töltsd le a legfrissebb [verziót](https://github.com/Xelofan/youtubedl-script/releases/latest)!
 2) Csomagold ki valahova a tartalmát!
 3) Töltsd le a [Microsoft Visual C++ 2010 Redistributable Package (x86)](https://www.microsoft.com/en-US/download/details.aspx?id=5555)-t és telepítsd fel!
 
