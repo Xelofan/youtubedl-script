@@ -5,13 +5,13 @@ set /p videoURL="> "
 
 echo.
 echo Verzio ellenorzese..
-call _files\update.bat
+call .files\update.bat
 echo.
 echo Verzio ellenorzes kesz.
 cls
 
 echo Letoltes folyamataban, ne zard be az ablakot!
-_files\youtube-dl.exe "%videoURL%" --console-title -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" -o "VIDEO\%%(title)s.%%(ext)s" -i
+.files\youtube-dl.exe "%videoURL%" --console-title -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" -o "VIDEO\%%(title)s.%%(ext)s" -i
 echo Letoltes kesz!
 
 echo Kilepes 3 masodpercen belul..
