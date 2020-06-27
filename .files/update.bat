@@ -6,14 +6,15 @@ set /p version=<.files/.version
 title YouTubeDL Script %version% - By Xelofan
 
 echo.
-echo [SCRIPT] Verzio ellenorzese..
+echo Frissitesek keresese..
 echo.
+
 powershell -command "wget -O .files\.tempversion https://raw.githubusercontent.com/Xelofan/youtubedl-script/master/.files/.version"
 set /p tempversion=<.files/.tempversion
 IF "%version%" == "%tempversion%" (
-	echo [SCRIPT] Nem talalhato script frissites.
+	echo [SCRIPT] Legfrissebb verziot hasznalod.
 ) ELSE (
-	echo [SCRIPT] Frissites letoltese..
+	echo [SCRIPT] Frissites talalhato, letoltes megkezdese..
 	powershell -command "wget -O %tempversion%.zip https://github.com/Xelofan/youtubedl-script/archive/%tempversion%.zip"
 	echo [SCRIPT] Frissites kicsomagolasa..
 	powershell -command "Expand-Archive -Path %tempversion%.zip -DestinationPath . -Force"
@@ -42,7 +43,7 @@ echo.
 .files\youtube-dl.exe -U
 
 IF EXIST ".files\youtube-dl.exe.new" (
-	echo Uj [YTDL] verzio letoltve. 
+	echo [YTDL] Uj verzio letoltve. 
 	echo.
 	powershell -command "rm .files\youtube-dl.exe"
 	echo Regi [YTDL] verzio eltavolitva.
@@ -52,6 +53,6 @@ IF EXIST ".files\youtube-dl.exe.new" (
 	TIMEOUT 2
 ) ELSE (
 	echo.
-	echo [YTDL] Legfrissebb verzio van feltelepitve.
+	echo [YTDL] A legfrissebb verziot hasznalod.
 	TIMEOUT 2
 )
