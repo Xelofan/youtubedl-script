@@ -15,14 +15,18 @@ IF "%version%" == "%tempversion%" (
 	echo [SCRIPT] Legfrissebb verziot hasznalod.
 ) ELSE (
 	echo [SCRIPT] Frissites talalhato, letoltes megkezdese..
+	TIMEOUT 1
 	powershell -command "wget -O %tempversion%.zip https://github.com/Xelofan/youtubedl-script/archive/%tempversion%.zip"
 	echo [SCRIPT] Frissites kicsomagolasa..
 	powershell -command "Expand-Archive -Path %tempversion%.zip -DestinationPath . -Force"
 	echo [SCRIPT] Fajlok rendberakasa..
+	TIMEOUT 1
 	powershell -command "Copy-Item youtubedl-script-%tempversion%/* -Destination . -Force -Recurse"
 	powershell -command "rmdir youtubedl-script-%tempversion% -Recurse"
 	powershell -command "rm %tempversion%.zip"
 	echo [SCRIPT] Sikeres frissites!
+	echo [SCRIPT] Ajanlott ujrainditani a scriptet, hogy ervenybe lepjenek a valtoztatasok.
+	TIMEOUT 3
 )
 powershell -command "rm .files/.tempversion"
 echo.

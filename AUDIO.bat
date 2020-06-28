@@ -1,6 +1,6 @@
 @echo off
 
-echo Masold be a letolteni kivant zene URL-jet! (Jobb klikk)
+echo Masold be a letolteni kivant zene URL-jet! A script a leheto legjobb minosegben fog letolteni! (Jobb klikk)
 set /p videoURL="> "
 
 echo.

@@ -9,21 +9,21 @@ set /p videoURL5="> "
 
 echo.
 echo Verzio ellenorzese..
-call _files\update.bat
+call .files\update.bat
 echo.
 echo Verzio ellenorzes kesz.
 cls
 
 echo Letoltes folyamataban, ne zard be az ablakot!
-_files\youtube-dl.exe "%videoURL1%" -x --audio-format "mp3" -o "AUDIO\%%(title)s.%%(ext)s" -i -f bestaudio
+.files\youtube-dl.exe "%videoURL1%" -x --audio-format "mp3" -o "AUDIO\%%(title)s.%%(ext)s" -i -f bestaudio
 echo Letoltes kesz!
-_files\youtube-dl.exe "%videoURL2%" -x --audio-format "mp3" -o "AUDIO\%%(title)s.%%(ext)s" -i -f bestaudio
+.files\youtube-dl.exe "%videoURL2%" -x --audio-format "mp3" -o "AUDIO\%%(title)s.%%(ext)s" -i -f bestaudio
 echo Letoltes kesz!
-_files\youtube-dl.exe "%videoURL3%" -x --audio-format "mp3" -o "AUDIO\%%(title)s.%%(ext)s" -i -f bestaudio
+.files\youtube-dl.exe "%videoURL3%" -x --audio-format "mp3" -o "AUDIO\%%(title)s.%%(ext)s" -i -f bestaudio
 echo Letoltes kesz!
-_files\youtube-dl.exe "%videoURL4%" -x --audio-format "mp3" -o "AUDIO\%%(title)s.%%(ext)s" -i -f bestaudio
+.files\youtube-dl.exe "%videoURL4%" -x --audio-format "mp3" -o "AUDIO\%%(title)s.%%(ext)s" -i -f bestaudio
 echo Letoltes kesz!
-_files\youtube-dl.exe "%videoURL5%" -x --audio-format "mp3" -o "AUDIO\%%(title)s.%%(ext)s" -i -f bestaudio
+.files\youtube-dl.exe "%videoURL5%" -x --audio-format "mp3" -o "AUDIO\%%(title)s.%%(ext)s" -i -f bestaudio
 echo Letoltes kesz!
 
 echo Kilepes 3 masodpercen belul..

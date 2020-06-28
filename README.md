@@ -7,6 +7,6 @@
 
 ##### Használat:
 - Nyisd meg vagy az **AUDIO.bat**-et, vagy a **VIDEO.bat**-et.
-- Első indításnál le fogja tölteni a legfrissebb YouTube-Dl-t és az ffmpeg-et, majd elkészül a VIDEO vagy AUDIO mappa.
+- Első indításnál le fogja tölteni a legfrissebb YouTubeDL-t és az ffmpeg-et, majd elkészül a VIDEO vagy AUDIO mappa.
 - Jobb klikkel be tudod másolni a linket. A támogatott oldalakat [itt](https://ytdl-org.github.io/youtube-dl/supportedsites.html) találod.
-- Amennyiben új verzió érhető el a YouTubeDL-ből vagy a script-ből, az le fog töltődni.
+- Amennyiben új verzió érhető el a YouTubeDL-ből vagy a script-ből, az automatikusan le fog töltődni.
