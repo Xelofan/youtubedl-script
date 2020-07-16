@@ -1,8 +1,8 @@
 @echo off
-::NE TÖRÖLD KI -- AUTOUPDATE MIATT KELL
+
 set /p version=<.files/.version
 
-:: Creator stuffs -- angolul jobban nÃ©z ki
+
 title YouTubeDL Script %version% - By Xelofan
 
 echo.
