@@ -1,62 +1,56 @@
 @echo off
 
-set /p version=<.files/.version
-
-
-title YouTubeDL Script %version% - By Xelofan
-
 echo.
-echo Frissitesek keresese..
+echo Checking for updates..
 echo.
 
 powershell -command "wget -O .files\.tempversion https://raw.githubusercontent.com/Xelofan/youtubedl-script/master/.files/.version"
 set /p tempversion=<.files/.tempversion
 IF "%version%" == "%tempversion%" (
-	echo [SCRIPT] Legfrissebb verziot hasznalod.
+	echo [SCRIPT] You're using the latest version.
 ) ELSE (
-	echo [SCRIPT] Frissites talalhato, letoltes megkezdese..
+	echo [SCRIPT] Update is available, starting download..
 	TIMEOUT 1
 	powershell -command "wget -O %tempversion%.zip https://github.com/Xelofan/youtubedl-script/archive/%tempversion%.zip"
-	echo [SCRIPT] Frissites kicsomagolasa..
+	echo [SCRIPT] Unpacking update..
 	powershell -command "Expand-Archive -Path %tempversion%.zip -DestinationPath . -Force"
-	echo [SCRIPT] Fajlok rendberakasa..
+	echo [SCRIPT] Arranging files..
 	TIMEOUT 1
 	powershell -command "Copy-Item youtubedl-script-%tempversion%/* -Destination . -Force -Recurse"
 	powershell -command "rmdir youtubedl-script-%tempversion% -Recurse"
 	powershell -command "rm %tempversion%.zip"
-	echo [SCRIPT] Sikeres frissites!
-	echo [SCRIPT] Ajanlott ujrainditani a scriptet, hogy ervenybe lepjenek a valtoztatasok.
+	echo [SCRIPT] Update complete!
 	TIMEOUT 3
 )
 powershell -command "rm .files/.tempversion"
 echo.
-echo [YTDL] Fajl ellenorzese..
+echo [YTDL] Checking file..
 echo.
 IF EXIST ".files\youtube-dl.exe" (
-	echo [YTDL] Fajl letezik.
+	echo [YTDL] File exists.
 	echo.
 ) ELSE (
-	echo [YTDL] Nem talalhato a youtube-dl.exe fajl, letoltes megkezdese..
+	echo [YTDL] The file does not exists, starting download..
 	powershell -command "wget -O .files\youtube-dl.exe https://yt-dl.org/latest/youtube-dl.exe"
-	echo [YTDL] Fajl letoltve.
+	echo [YTDL] File downloaded.
 	TIMEOUT 1
 )
 
-echo [YTDL] Frissitesek keresese..
+echo [YTDL] Checking for updates..
 echo.
 .files\youtube-dl.exe -U
 
 IF EXIST ".files\youtube-dl.exe.new" (
-	echo [YTDL] Uj verzio letoltve. 
+	echo [YTDL] Update downloaded. 
 	echo.
 	powershell -command "rm .files\youtube-dl.exe"
-	echo Regi [YTDL] verzio eltavolitva.
+	echo [YTDL] Removing old version..
 	echo.
 	powershell -command "mv .files\youtube-dl.exe.new .files\youtube-dl.exe"
-	echo [YTDL] Frissites kesz.
+	echo [YTDL] Update complete!!
 	TIMEOUT 2
 ) ELSE (
 	echo.
-	echo [YTDL] A legfrissebb verziot hasznalod.
+	echo [YTDL] You're using the latest version.
 	TIMEOUT 2
 )
