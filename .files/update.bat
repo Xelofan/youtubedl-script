@@ -7,50 +7,50 @@ echo.
 powershell -command "wget -O .files\.tempversion https://raw.githubusercontent.com/Xelofan/youtubedl-script/master/.files/.version"
 set /p tempversion=<.files/.tempversion
 IF "%version%" == "%tempversion%" (
-	echo [SCRIPT] You're using the latest version.
+	echo [script] You're using the latest version.
 ) ELSE (
-	echo [SCRIPT] Update is available, starting download..
+	echo [script] Update is available, starting download..
 	TIMEOUT 1
 	powershell -command "wget -O %tempversion%.zip https://github.com/Xelofan/youtubedl-script/archive/%tempversion%.zip"
-	echo [SCRIPT] Unpacking update..
+	echo [script] Unpacking update..
 	powershell -command "Expand-Archive -Path %tempversion%.zip -DestinationPath . -Force"
-	echo [SCRIPT] Arranging files..
+	echo [script] Arranging files..
 	TIMEOUT 1
 	powershell -command "Copy-Item youtubedl-script-%tempversion%/* -Destination . -Force -Recurse"
 	powershell -command "rmdir youtubedl-script-%tempversion% -Recurse"
 	powershell -command "rm %tempversion%.zip"
-	echo [SCRIPT] Update complete!
+	echo [script] Update complete.
 	TIMEOUT 3
 )
 powershell -command "rm .files/.tempversion"
 echo.
-echo [YTDL] Checking file..
+echo [youtubedl] Checking file..
 echo.
 IF EXIST ".files\youtube-dl.exe" (
-	echo [YTDL] File exists.
+	echo [youtubedl] File exists.
 	echo.
 ) ELSE (
-	echo [YTDL] The file does not exists, starting download..
+	echo [youtubedl] The file does not exists, starting download..
 	powershell -command "wget -O .files\youtube-dl.exe https://yt-dl.org/latest/youtube-dl.exe"
-	echo [YTDL] File downloaded.
+	echo [youtubedl] File downloaded.
 	TIMEOUT 1
 )
 
-echo [YTDL] Checking for updates..
+echo [youtubedl] Checking for updates..
 echo.
 .files\youtube-dl.exe -U
 
 IF EXIST ".files\youtube-dl.exe.new" (
-	echo [YTDL] Update downloaded. 
+	echo [youtubedl] Update downloaded.
 	echo.
 	powershell -command "rm .files\youtube-dl.exe"
-	echo [YTDL] Removing old version..
+	echo [youtubedl] Old version removed.
 	echo.
 	powershell -command "mv .files\youtube-dl.exe.new .files\youtube-dl.exe"
-	echo [YTDL] Update complete!!
+	echo [youtubedl] Update complete.
 	TIMEOUT 2
 ) ELSE (
 	echo.
-	echo [YTDL] You're using the latest version.
+	echo [youtubedl] You're using the latest version.
 	TIMEOUT 2
 )
