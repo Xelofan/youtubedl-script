@@ -30,7 +30,7 @@ IF EXIST ".files\youtube-dl.exe" (
 	echo [youtubedl] File exists.
 	echo.
 ) ELSE (
-	echo [youtubedl] The file does not exists, starting download..
+	echo [youtubedl] The file does not exist, starting download..
 	powershell -command "wget -O .files\youtube-dl.exe https://yt-dl.org/latest/youtube-dl.exe"
 	echo [youtubedl] File downloaded.
 	TIMEOUT 1
