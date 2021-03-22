@@ -4,14 +4,14 @@ echo.
 echo Checking for updates..
 echo.
 
-powershell -command "wget -O .files\.tempversion https://raw.githubusercontent.com/Xelofan/youtubedl-script/master/.files/.version"
+powershell -command "wget -O .files\.tempversion https://gitlab.com/Xelofan/youtubedl-script/-/raw/master/.files/.version"
 set /p tempversion=<.files/.tempversion
 IF "%version%" == "%tempversion%" (
 	echo [script] You're using the latest version.
 ) ELSE (
 	echo [script] Update is available, starting download..
 	TIMEOUT 1
-	powershell -command "wget -O %tempversion%.zip https://github.com/Xelofan/youtubedl-script/archive/%tempversion%.zip"
+	powershell -command "wget -O %tempversion%.zip https://gitlab.com/Xelofan/youtubedl-script/-/archive/%tempversion%/youtubedl-script-%tempversion%.zip"
 	echo [script] Unpacking update..
 	powershell -command "Expand-Archive -Path %tempversion%.zip -DestinationPath . -Force"
 	echo [script] Arranging files..
