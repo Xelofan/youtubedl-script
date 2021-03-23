@@ -82,7 +82,7 @@ namespace YTDL
             this.mehet.Name = "mehet";
             this.mehet.Size = new System.Drawing.Size(236, 34);
             this.mehet.TabIndex = 0;
-            this.mehet.Text = "MEHET :D";
+            this.mehet.Text = "Download";
             this.mehet.UseVisualStyleBackColor = true;
             this.mehet.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -148,7 +148,7 @@ namespace YTDL
             this.checkUpdate.Name = "checkUpdate";
             this.checkUpdate.Size = new System.Drawing.Size(136, 23);
             this.checkUpdate.TabIndex = 8;
-            this.checkUpdate.Text = "YouTube DL Update";
+            this.checkUpdate.Text = "Update YTDL";
             this.checkUpdate.UseVisualStyleBackColor = true;
             this.checkUpdate.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -166,11 +166,11 @@ namespace YTDL
             // notifier
             // 
             this.notifier.AutoSize = true;
-            this.notifier.Location = new System.Drawing.Point(104, 16);
+            this.notifier.Location = new System.Drawing.Point(91, 16);
             this.notifier.Name = "notifier";
-            this.notifier.Size = new System.Drawing.Size(269, 15);
+            this.notifier.Size = new System.Drawing.Size(282, 15);
             this.notifier.TabIndex = 10;
-            this.notifier.Text = "Nincs YTDL letöltve, kattints ide, hogy letöltsd -->";
+            this.notifier.Text = "YTDL isn\'t downloaded, check here to download -->";
             this.notifier.Visible = false;
             this.notifier.Click += new System.EventHandler(this.notifier_Click);
             // 
@@ -180,38 +180,38 @@ namespace YTDL
             this.ffmpegBtn.Name = "ffmpegBtn";
             this.ffmpegBtn.Size = new System.Drawing.Size(135, 23);
             this.ffmpegBtn.TabIndex = 11;
-            this.ffmpegBtn.Text = "FFmpeg Update";
+            this.ffmpegBtn.Text = "Update FFmpeg";
             this.ffmpegBtn.UseVisualStyleBackColor = true;
             this.ffmpegBtn.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // ffmpegText
             // 
             this.ffmpegText.AutoSize = true;
-            this.ffmpegText.Location = new System.Drawing.Point(88, 46);
+            this.ffmpegText.Location = new System.Drawing.Point(82, 46);
             this.ffmpegText.Name = "ffmpegText";
-            this.ffmpegText.Size = new System.Drawing.Size(285, 15);
+            this.ffmpegText.Size = new System.Drawing.Size(291, 15);
             this.ffmpegText.TabIndex = 12;
-            this.ffmpegText.Text = "Nincs FFmpeg letöltve, kattints ide, hogy letöltsd -->";
+            this.ffmpegText.Text = "FFmpeg isn\'t downloaded, click here to download -->";
             this.ffmpegText.Visible = false;
             // 
             // ffmpegDownloading
             // 
             this.ffmpegDownloading.AutoSize = true;
-            this.ffmpegDownloading.Location = new System.Drawing.Point(394, 68);
+            this.ffmpegDownloading.Location = new System.Drawing.Point(383, 68);
             this.ffmpegDownloading.Name = "ffmpegDownloading";
-            this.ffmpegDownloading.Size = new System.Drawing.Size(103, 15);
+            this.ffmpegDownloading.Size = new System.Drawing.Size(130, 15);
             this.ffmpegDownloading.TabIndex = 13;
-            this.ffmpegDownloading.Text = "FFmpeg letöltése..";
+            this.ffmpegDownloading.Text = "Downloading FFmpeg..";
             this.ffmpegDownloading.Visible = false;
             // 
             // ytdlDownload
             // 
             this.ytdlDownload.AutoSize = true;
-            this.ytdlDownload.Location = new System.Drawing.Point(386, 68);
+            this.ytdlDownload.Location = new System.Drawing.Point(390, 68);
             this.ytdlDownload.Name = "ytdlDownload";
-            this.ytdlDownload.Size = new System.Drawing.Size(123, 15);
+            this.ytdlDownload.Size = new System.Drawing.Size(114, 15);
             this.ytdlDownload.TabIndex = 14;
-            this.ytdlDownload.Text = "YouTube DL letöltése..";
+            this.ytdlDownload.Text = "Downloading YTDL..\r\n";
             this.ytdlDownload.Visible = false;
             // 
             // count
@@ -242,7 +242,7 @@ namespace YTDL
             // 
             this.url2.Location = new System.Drawing.Point(4, 33);
             this.url2.Name = "url2";
-            this.url2.PlaceholderText = "2. URL";
+            this.url2.PlaceholderText = "URL #2";
             this.url2.Size = new System.Drawing.Size(148, 23);
             this.url2.TabIndex = 22;
             // 
@@ -314,7 +314,7 @@ namespace YTDL
             // 
             this.url3.Location = new System.Drawing.Point(4, 33);
             this.url3.Name = "url3";
-            this.url3.PlaceholderText = "3. URL";
+            this.url3.PlaceholderText = "URL #3";
             this.url3.Size = new System.Drawing.Size(148, 23);
             this.url3.TabIndex = 22;
             // 
@@ -354,7 +354,7 @@ namespace YTDL
             // 
             this.url4.Location = new System.Drawing.Point(4, 33);
             this.url4.Name = "url4";
-            this.url4.PlaceholderText = "4. URL";
+            this.url4.PlaceholderText = "URL #4";
             this.url4.Size = new System.Drawing.Size(148, 23);
             this.url4.TabIndex = 22;
             // 
@@ -394,7 +394,7 @@ namespace YTDL
             // 
             this.url6.Location = new System.Drawing.Point(4, 33);
             this.url6.Name = "url6";
-            this.url6.PlaceholderText = "6. URL";
+            this.url6.PlaceholderText = "URL #6";
             this.url6.Size = new System.Drawing.Size(148, 23);
             this.url6.TabIndex = 22;
             // 
@@ -434,7 +434,7 @@ namespace YTDL
             // 
             this.url7.Location = new System.Drawing.Point(4, 33);
             this.url7.Name = "url7";
-            this.url7.PlaceholderText = "7. URL";
+            this.url7.PlaceholderText = "URL #7";
             this.url7.Size = new System.Drawing.Size(148, 23);
             this.url7.TabIndex = 22;
             // 
@@ -474,7 +474,7 @@ namespace YTDL
             // 
             this.url5.Location = new System.Drawing.Point(4, 33);
             this.url5.Name = "url5";
-            this.url5.PlaceholderText = "5. URL";
+            this.url5.PlaceholderText = "URL #5";
             this.url5.Size = new System.Drawing.Size(148, 23);
             this.url5.TabIndex = 22;
             // 
@@ -508,7 +508,7 @@ namespace YTDL
             this.MaximumSize = new System.Drawing.Size(543, 417);
             this.MinimumSize = new System.Drawing.Size(543, 417);
             this.Name = "Form1";
-            this.Text = "YouTube-DL Kliens";
+            this.Text = "YTDL Client";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.count)).EndInit();
             this.groupBox6.ResumeLayout(false);
