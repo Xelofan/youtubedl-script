@@ -1,7 +1,7 @@
 # YouTubeDL Script
 
 ##### How to download:
-1) Download the [latest version](https://gitlab.com/Xelofan/youtubedl-script/-/releases)!
+1) Download the [latest version](https://gitlab.com/Xelofan/youtubedl-script/-/archive/1.7.4.1/youtubedl-script-1.7.4.1.zip)!
 2) Extract the files somewhere!
 3) Install [Microsoft Visual C++ 2010 Redistributable Package (x86)](https://www.microsoft.com/en-US/download/details.aspx?id=5555) if you don't have it.
 
