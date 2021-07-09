@@ -12,4 +12,4 @@
 - If there's a new version available of YouTubeDL or the script, it will be automatically downloaded.
 
 ##### Note:
-- The script has only beed tested on Windows 10 Pro.
+- The script has only been tested on Windows 10/11 Pro.
