@@ -10,7 +10,7 @@ IF "%version%" == "%tempversion%" (
 	echo [script] You're using the latest version.
 ) ELSE (
 	echo [script] Update is available, starting download..
-	powershell -command "wget -O %tempversion%.zip https://gitlab.com/Xelofan/youtubedl-script/-/archive/%tempversion%/youtubedl-script-%tempversion%.zip"
+	powershell -command "(New-Object System.Net.WebClient).DownloadFile('https://gitlab.com/Xelofan/youtubedl-script/-/archive/%tempversion%/youtubedl-script-%tempversion%.zip', '%tempversion%.zip')"
 	echo [script] Unpacking update..
 	powershell -command "Expand-Archive -Path %tempversion%.zip -DestinationPath . -Force"
 	echo [script] Arranging files..
