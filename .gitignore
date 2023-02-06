@@ -1,4 +1,4 @@
 AUDIO
 VIDEO
-.files/youtube-dl.exe
+.files/*.exe
 .files/.tempversion
