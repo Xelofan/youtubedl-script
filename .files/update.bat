@@ -4,19 +4,19 @@ echo.
 echo Checking for updates..
 echo.
 
-powershell -command "wget -O .files\.tempversion https://gitlab.com/Xelofan/youtubedl-script/-/raw/master/.files/.version"
+powershell -command "wget -O .files\.tempversion https://github.com/Xelofan/youtubedl-script/raw/master/.files/.version"
 set /p tempversion=<.files/.tempversion
 IF "%version%" == "%tempversion%" (
 	echo [script] You're using the latest version.
 ) ELSE (
 	echo [script] Update is available, starting download..
-	powershell -command "(New-Object System.Net.WebClient).DownloadFile('https://gitlab.com/Xelofan/youtubedl-script/-/archive/%tempversion%/youtubedl-script-%tempversion%.zip', '%tempversion%.zip')"
+	powershell -command "(New-Object System.Net.WebClient).DownloadFile('https://github.com/Xelofan/youtubedl-script/archive/refs/heads/master.zip', 'master.zip')"
 	echo [script] Unpacking update..
-	powershell -command "Expand-Archive -Path %tempversion%.zip -DestinationPath . -Force"
+	powershell -command "Expand-Archive -Path master.zip -DestinationPath . -Force"
 	echo [script] Arranging files..
-	powershell -command "Copy-Item youtubedl-script-%tempversion%/* -Destination . -Force -Recurse"
-	powershell -command "rmdir youtubedl-script-%tempversion% -Recurse"
-	powershell -command "rm %tempversion%.zip"
+	powershell -command "Copy-Item youtubedl-script-master/* -Destination . -Force -Recurse"
+	powershell -command "rmdir youtubedl-script-master -Recurse"
+	powershell -command "rm master.zip"
 	echo [script] Update complete.
 )
 powershell -command "rm .files/.tempversion"
